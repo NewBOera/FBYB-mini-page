@@ -1,13 +1,11 @@
 ---
-import HeroStructure from '../../structures/HeroStructure.astro';
+import SectionStructure from '../structures/SectionStructure.astro';
 ---
 
-<!-- ? Home section -->
-<HeroStructure id="home-section" wrapperClasses="lg:flex-row" sectionClasses="home-section">
+<SectionStructure idSection="about-us" wrapperClasses="lg:flex-row">
   <article class="flex flex-col gap-4 lg:w-7/12 lg:gap-8 lg:justify-center">
     <div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl relative z-20 font-Narrow">Titulo</h1>
-      <p class="font-semibold text-lg"></p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl relative z-20">Titulo</h1>
     </div>
 
     <p class="lg:text-lg"></p>
@@ -28,4 +26,4 @@ import HeroStructure from '../../structures/HeroStructure.astro';
       />
     </div>
   </article>
-</HeroStructure>
+</SectionStructure>

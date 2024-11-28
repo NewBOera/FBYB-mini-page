@@ -1,7 +1,5 @@
 ---
 import { fade } from 'astro:transitions';
-import AgeVerification from '../components/cookies/AgeVerification';
-import ExperienceCookie from '../components/cookies/ExperienceCookie';
 
 import Footer from '../components/Footer.astro';
 
@@ -31,18 +29,15 @@ const { title } = Astro.props;
 
     <!--? Styles -->
     <link rel="stylesheet" href="https://shualim.online/devs-mx-resources/notify/notify.css" />
+    <link rel="stylesheet" href="/styles/globals.css" />
 
     <!-- ? Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/znb0tzz.css" />
   </head>
-  <body class="overflow" transition:animate={fade({ duration: '0.5s' })}>
+  <body class="overflow flex flex-col items-center Satoshi-regular" transition:animate={fade({ duration: '0.5s' })}>
     <slot />
     <!-- ! Footer -->
     <Footer />
-
-    <!-- ! Cookies modals -->
-    <AgeVerification client:load cookieName="[change name]-age-verification" />
-    <ExperienceCookie client:load cookieName="[change name]-experience-cookie" />
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -67,48 +62,3 @@ const { title } = Astro.props;
     </script>
   </body>
 </html>
-
-<style is:global>
-  html,
-  body {
-    scroll-behavior: smooth;
-    animation-timing-function: ease-out;
-  }
-
-  textarea {
-    resize: none !important;
-  }
-
-  section {
-    scroll-margin-top: 80px;
-  }
-
-  .bg-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .overflow::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  .overflow::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-
-  .overflow::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-
-  .overflow::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  .form-control {
-    padding: 20px 0;
-    width: 100% !important;
-  }
-</style>

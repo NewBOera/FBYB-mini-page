@@ -1,21 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import About from '../sections-pages/index/About.astro';
+import About from '../sections/About.astro';
 
 import NavbarMobile from '../components/header/NavbarMobile.astro';
 import NavbarDesktop from '../components/header/NavbarDesktop.astro';
-import Home from '../sections-pages/index/Home.astro';
+import Home from '../sections/Home.astro';
+import Wrapper from '../structures/Wrapper.astro';
 ---
 
 <Layout title="">
-  <!-- ? navbar mobile -->
-  <NavbarMobile isLanding={true} />
+  <Wrapper>
+    <!-- ? navbar mobile -->
+    <NavbarMobile isLanding={true} />
 
-  <!-- ? Header section desktop-->
-  <NavbarDesktop isLanding={true} />
+    <!-- ? Header section desktop-->
+    <NavbarDesktop isLanding={true} />
 
-  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
-    <Home />
-    <About />
-  </main>
+    <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+      <Home />
+      <About />
+    </main>
+  </Wrapper>
 </Layout>

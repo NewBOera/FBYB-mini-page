@@ -1,0 +1,39 @@
+@import './fonts.css';
+
+html,
+body {
+  scroll-behavior: smooth;
+  animation-timing-function: ease-out;
+}
+
+textarea {
+  resize: none !important;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overflow::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.overflow::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
