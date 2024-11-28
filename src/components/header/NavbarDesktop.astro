@@ -6,43 +6,8 @@ interface Props {
 const { isLanding } = Astro.props;
 ---
 
-<header class="hidden bg-white text-black justify-center items-center md:flex fixed max-w-full z-50 bg-main shadow-md border-b-[1px] border-[#ffffff44]">
-  <nav class="flex w-full justify-between items-center rounded-xl md:px-8 h-[80px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1400px]">
-    <div class="flex items-center grow basis-0 gap-10">
-      <div class="font-normal text-lg flex items-center gap-4">
-        <a href={isLanding ? '#home-section' : 'index.html'}><img class="object-contain w-12 shrink-0" src="/public/assets/navbar/logo.png" alt="Logo" title="Slots Volindo" /></a>
-        <span class="text-lg font-bold hidden xl:block text-[#7F5A83]">[CHANGE NAME]</span>
-      </div>
-    </div>
-
-    <ul class="font-medium text-[#7F5A83] text-lg flex gap-10 xl:gap-12">
-      <li class="hover:text-yellow transition-all duration-200 nav-item" id-nav="home-section"><a href={isLanding ? '#home-section' : 'index.html'}>Home</a></li>
-      <li class="hover:text-yellow transition-all duration-200 nav-item" id-nav="about-us-section"><a href={isLanding ? '#about-us-section' : 'index.html#about-us-section'}>About us</a></li>
-      <li class="hover:text-yellow transition-all duration-200 nav-item" id-nav="packages-section"><a href={isLanding ? '#packages-section' : 'index.html#packages-section'}>Packages</a></li>
-      <li class="hover:text-yellow transition-all duration-200 nav-item" id-nav="contact-section"><a href={isLanding ? '#contact-section' : 'index.html#contact-section'}>Contact</a></li>
-      <li class="hover:text-yellow transition-all duration-200 nav-item" id-nav="subscription-section">
-        <a href={isLanding ? '#subscription-section' : 'index.html#subscription-section'}>Live and Subscription</a>
-      </li>
-      <li class="hover:text-yellow transition-all duration-200 nav-item" id-nav="faq-section">
-        <a href={isLanding ? '#faq-section' : 'index.html#faq-section'}>FAQ</a>
-      </li>
-    </ul>
-
-    <div class="flex gap-4 grow basis-0 justify-end"></div>
+<header class="hidden text-black justify-center items-center lg:flex fixed max-w-full z-50 mt-[50px]">
+  <nav class="flex w-full justify-between items-center rounded-xl mx-6 md:px-8 lg:mx-3 h-[80px]">
+    <a href={isLanding ? '#home-section' : 'index.html'}><img class="object-contain w-28 h-28 shrink-0" src="/public/assets/navbar/logo.png" alt="Logo" title="" /></a>
   </nav>
 </header>
-
-<style>
-  .active {
-    color: #7f5a83;
-    font-weight: bolder;
-  }
-
-  .active::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #7f5a83;
-  }
-</style>

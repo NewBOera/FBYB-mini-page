@@ -37,3 +37,7 @@ section {
 .overflow::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.list-custom::marker {
+  color: #b18e3b; /* Cambia al color deseado */
+}
