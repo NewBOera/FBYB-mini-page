@@ -1,0 +1,39 @@
+---
+interface Props {
+  isLanding: boolean;
+}
+
+const { isLanding } = Astro.props;
+---
+
+<header class="flex flex-col items-center justify-center bg-white md:hidden fixed z-50 w-screen shadow-md">
+  <nav class="flex w-full sm:w-[640px] md:w-[768px] px-3 sm:px-6 z-40 relative justify-between h-[80px]">
+    <div class="text-lg flex gap-4 items-center">
+      <a class="flex items-center gap-2" href={isLanding ? '#home-section' : 'index.html'}>
+        <img class="object-contain w-7" src="/public/assets/navbar/logo.png" alt="Logo" title="" />
+        <span class="text-[15px] font-bold">Golden Spin Manor</span>
+      </a>
+    </div>
+
+    <div id="menu-icon-container" class="flex items-center justify-center">
+      <img src="/public/assets/navbar/menu-icon.png" class="object-contain w-5" id="menu-icon" />
+      <img src="/public/assets/navbar/menu-icon.png" class="hidden object-contain w-5" id="close-icon" />
+    </div>
+  </nav>
+
+  <div
+    id="menu"
+    class="text-yellow bg-white text-[#7F5A83] -translate-x-[768px] w-full h-[250px] border-b-[0.5px] shadow-md border-[#F5E2C8] transition-all ease-in-out duration-200 flex items-center absolute z-10 top-[80px] right-0 left-0 rounded-br-[100px] md:hidden"
+  >
+    <div class="w-[200px] p-5 rounded-r-[50px]">
+      <ul class="flex flex-col md:text-lg gap-5">
+        <li class="text-base font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#home-section' : 'index.html'}>Home</a></li>
+        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#about-us-section' : 'index.html#about-us-section'}>About Us</a></li>
+        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#packages-section' : 'index.html#packages-section'}>Packages</a></li>
+        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#contact' : 'index.html#contact'}>Contact</a></li>
+        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#subscription-section' : 'index.html#subscription-section'}>Live and Suscription</a></li>
+        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#faq-section' : 'index.html#faq-section'}>FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

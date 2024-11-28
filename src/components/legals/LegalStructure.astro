@@ -1,0 +1,16 @@
+---
+import LegalsLayout from '../../layouts/LayoutLegals.astro';
+import SectionStructure from '../../structures/SectionStructure.astro';
+import LegalNavbar from './LegalNavbar.astro';
+---
+
+<LegalsLayout title="">
+  <SectionStructure idSection="" wrapperClasses="py-28 w-full">
+    <section class="flex flex-col gap-8 md:flex-row w-full">
+      <article class="w-full md:w-9/12 order-4 md:order-none">
+        <slot />
+      </article>
+      <LegalNavbar />
+    </section>
+  </SectionStructure>
+</LegalsLayout>

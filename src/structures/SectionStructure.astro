@@ -1,0 +1,15 @@
+---
+interface Props {
+  idSection: string;
+  wrapperClasses?: string;
+  sectionClasses?: string;
+}
+
+const { idSection, wrapperClasses, sectionClasses } = Astro.props;
+---
+
+<section id={`${idSection}-section`} class=`flex justify-center py-3 md:py-4 lg:py-6 xl:py-8 ${sectionClasses} animate-section`>
+  <div class={`sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1400px] flex flex-col px-3 sm:px-6 md:px-8 gap-8 sm:gap-16 md:gap-10 ${wrapperClasses}`}>
+    <slot />
+  </div>
+</section>

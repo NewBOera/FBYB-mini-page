@@ -1,0 +1,68 @@
+---
+import { z } from 'zod';
+import { ExampleSchema } from '../../../../d';
+
+import Svg from './Svg.astro';
+
+type Faq = z.infer<typeof ExampleSchema>;
+
+interface Props {
+  faq: Faq;
+}
+
+const { faq } = Astro.props;
+---
+
+<article class="accordion-item w-full rounded-xl p-4 border-[1px] border-[#CACAF4]">
+  <div class="accordion-header flex items-center gap-4 border-none text-md base:text-lg">
+    <Svg />
+    <p class="text-[16px]/[21px] md:text-[16px]/[24px] lg:text-[18px]/[26px] text-[#9191E8] max-w-[90%]">{}</p>
+  </div>
+  <div class="accordion-content ml-10">
+    <p class="accordion-content-p font-light text-[12px]/[19px] md:text-[14px]/[24px] lg:text-[16px]/[25px]">
+      <!-- {Array.isArray(faq.answer) ? faq.answer.map(answer => <p class="mb-1">{answer}</p>) : <p class="mb-1">{}</p>} -->
+    </p>
+  </div>
+</article>
+
+<style is:global>
+  .accordion-header {
+    padding: 10px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+    position: relative;
+    border-width: 1px;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    padding-inline: 10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .accordion-item.open .accordion-content {
+    max-height: 500px;
+  }
+  .arrow {
+    transition: transform 0.5s ease-out;
+  }
+  .accordion-item.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  .accordion-item.open .arrow > svg > path {
+    fill: #000000;
+  }
+
+  .accordion-header.clicked {
+    color: #625dfa;
+  }
+
+  .accordion-header.clicked > p {
+    color: #000000;
+  }
+</style>

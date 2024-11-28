@@ -1,0 +1,42 @@
+.swiper-slide-active {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  width: 500px;
+  height: 500px;
+}
+
+.swiper-pagination-bullet {
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-color: #0fd2ae;
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 8px;
+  --swiper-pagination-bottom: 100px;
+  --swiper-pagination-top: 100px;
+  --swiper-pagination-fraction-color: inherit;
+  --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+  --swiper-pagination-progressbar-size: 4px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 15px;
+  --swiper-pagination-bullet-height: 15px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: white;
+}
+
+.swiper-pagination {
+  --swiper-pagination-bottom: 0px;
+  position: relative;
+  z-index: 100;
+}

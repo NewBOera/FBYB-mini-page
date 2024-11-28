@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import SectionStructure from '../../../structures/SectionStructure.astro';
+import FaqItem from './components/FaqItem.astro';
+
+const faqs = await getCollection('collectionExample');
+---
+
+<!-- ? F.A.Q. section -->
+<SectionStructure idSection="faq" wrapperClasses="2xl:gap-10 items-center py-10" sectionClasses="bg-[#fffffa]">
+  <h2 class="text-[#11005E] font-[600] text-[22px]/[29px] md:text-[24px]/[32px] lg:text-[26px]/[36px] 2xl:text-[32px]/[42px] text-center">Learn more about virtual social casinos here:</h2>
+
+  <div class="flex flex-wrap justify-between bg-white rounded-2xl py-4 gap-6">
+    {
+      faqs.map(faq => {
+        return <FaqItem faq={faq.data} />;
+      })
+    }
+  </div>
+
+  <div class="flex justify-center sm:justify-start w-full">
+    <button class="gradient text-white py-2 font-medium rounded-lg w-full max-w-[450px]">Explore here!</button>
+  </div>
+</SectionStructure>

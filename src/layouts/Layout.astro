@@ -1,0 +1,114 @@
+---
+import { fade } from 'astro:transitions';
+import AgeVerification from '../components/cookies/AgeVerification';
+import ExperienceCookie from '../components/cookies/ExperienceCookie';
+
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script defer src="/scripts/navbar.js"></script>
+    <script defer src="/scripts/send-form.js"></script>
+    <script defer src="https://shualim.online/devs-mx-resources/form-secure/form-secure-en.js"></script>
+    <script defer src="https://shualim.online/devs-mx-resources/notify/notify.js"></script>
+
+    <!-- ? Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--? Styles -->
+    <link rel="stylesheet" href="https://shualim.online/devs-mx-resources/notify/notify.css" />
+
+    <!-- ? Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/znb0tzz.css" />
+  </head>
+  <body class="overflow" transition:animate={fade({ duration: '0.5s' })}>
+    <slot />
+    <!-- ! Footer -->
+    <Footer />
+
+    <!-- ! Cookies modals -->
+    <AgeVerification client:load cookieName="[change name]-age-verification" />
+    <ExperienceCookie client:load cookieName="[change name]-experience-cookie" />
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // @ts-expect-error
+        ScrollReveal().reveal('.animate-section', {
+          duration: 800,
+          origin: 'bottom',
+          distance: '50px',
+          easing: 'ease-in-out',
+          reset: false,
+        });
+
+        // @ts-expect-error
+        ScrollReveal().reveal('.animate-hero', {
+          duration: 600,
+          origin: 'left',
+          distance: '30px',
+          easing: 'ease-in-out',
+          reset: false,
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    scroll-behavior: smooth;
+    animation-timing-function: ease-out;
+  }
+
+  textarea {
+    resize: none !important;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .overflow::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .overflow::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .overflow::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  .overflow::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .form-control {
+    padding: 20px 0;
+    width: 100% !important;
+  }
+</style>
