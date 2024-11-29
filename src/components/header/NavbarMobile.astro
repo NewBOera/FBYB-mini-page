@@ -6,8 +6,8 @@ interface Props {
 const { isLanding } = Astro.props;
 ---
 
-<header class="flex flex-col items-center justify-center lg:hidden fixed w-full max-w-full z-50 px-6 sm:px-9 md:px-11 py-3">
-  <nav class="flex w-full sm:px-10 z-40 relative justify-between h-[100px] mt-[45px] px-8 backdrop-blur-xl bg-[#FFFFFF88]">
+<header class="flex flex-col items-center justify-center lg:hidden fixed w-full max-w-full z-50 shadow-[0px_10px_50px_-30px_#00000024]">
+  <nav class="flex w-full sm:px-10 z-40 relative justify-between h-[100px] px-8 bg-[#FFFFFF]">
     <div class="text-lg flex gap-4 items-center">
       <a class="flex items-center gap-2" href={isLanding ? '#home-section' : 'index.html'}>
         <img class="object-contain" src="/public/assets/navbar/logo.png" alt="Logo" title="" />

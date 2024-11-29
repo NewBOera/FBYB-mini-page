@@ -79,7 +79,7 @@ export const FormComponent = () => {
           <p className="text-[#A7B3C7] font-light text-xs text-center px-6 lg:text-start lg:w-6/12">
             Your details are safe with us. We respect your privacy and use your information solely to assist you with your inquiry.
           </p>
-          <button type="submit" className="bg-yellow text-blueBg text-lg font-medium py-3 rounded-md lg:w-6/12">
+          <button type="submit" className="bg-yellow text-blueBg text-lg font-medium py-3 rounded-md lg:w-6/12 hover:scale-95 transition-all duration-200">
             Book My Free Call
           </button>
         </div>
@@ -113,29 +113,29 @@ export const CountDown = () => {
 export const ContactButtons = () => {
   return (
     <div className="w-full flex justify-center items-center gap-4">
-      <article className="bg-[#59708A] w-max p-1 rounded-md">
+      <button className="bg-[#59708A] w-max p-1 rounded-md hover:scale-105 transition-all duration-200">
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Ik0xMi4wNCAyYy01LjQ2IDAtOS45MSA0LjQ1LTkuOTEgOS45MWMwIDEuNzUuNDYgMy40NSAxLjMyIDQuOTVMMi4wNSAyMmw1LjI1LTEuMzhjMS40NS43OSAzLjA4IDEuMjEgNC43NCAxLjIxYzUuNDYgMCA5LjkxLTQuNDUgOS45MS05LjkxYzAtMi42NS0xLjAzLTUuMTQtMi45LTcuMDFBOS44MiA5LjgyIDAgMCAwIDEyLjA0IDJtLjAxIDEuNjdjMi4yIDAgNC4yNi44NiA1LjgyIDIuNDJhOC4yMyA4LjIzIDAgMCAxIDIuNDEgNS44M2MwIDQuNTQtMy43IDguMjMtOC4yNCA4LjIzYy0xLjQ4IDAtMi45My0uMzktNC4xOS0xLjE1bC0uMy0uMTdsLTMuMTIuODJsLjgzLTMuMDRsLS4yLS4zMmE4LjIgOC4yIDAgMCAxLTEuMjYtNC4zOGMuMDEtNC41NCAzLjctOC4yNCA4LjI1LTguMjRNOC41MyA3LjMzYy0uMTYgMC0uNDMuMDYtLjY2LjMxYy0uMjIuMjUtLjg3Ljg2LS44NyAyLjA3YzAgMS4yMi44OSAyLjM5IDEgMi41NmMuMTQuMTcgMS43NiAyLjY3IDQuMjUgMy43M2MuNTkuMjcgMS4wNS40MiAxLjQxLjUzYy41OS4xOSAxLjEzLjE2IDEuNTYuMWMuNDgtLjA3IDEuNDYtLjYgMS42Ny0xLjE4cy4yMS0xLjA3LjE1LTEuMThjLS4wNy0uMS0uMjMtLjE2LS40OC0uMjdjLS4yNS0uMTQtMS40Ny0uNzQtMS42OS0uODJjLS4yMy0uMDgtLjM3LS4xMi0uNTYuMTJjLS4xNi4yNS0uNjQuODEtLjc4Ljk3Yy0uMTUuMTctLjI5LjE5LS41My4wN2MtLjI2LS4xMy0xLjA2LS4zOS0yLTEuMjNjLS43NC0uNjYtMS4yMy0xLjQ3LTEuMzgtMS43MmMtLjEyLS4yNC0uMDEtLjM5LjExLS41Yy4xMS0uMTEuMjctLjI5LjM3LS40NGMuMTMtLjE0LjE3LS4yNS4yNS0uNDFjLjA4LS4xNy4wNC0uMzEtLjAyLS40M2MtLjA2LS4xMS0uNTYtMS4zNS0uNzctMS44NGMtLjItLjQ4LS40LS40Mi0uNTYtLjQzYy0uMTQgMC0uMy0uMDEtLjQ3LS4wMSIvPjwvc3ZnPg=="
           alt="Whatsapp icon"
           className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
         />
-      </article>
+      </button>
 
-      <article className="bg-[#59708A] w-max p-1 rounded-md">
+      <button className="bg-[#59708A] w-max p-1 rounded-md hover:scale-105 transition-all duration-200">
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Ik02LjYyIDEwLjc5YzEuNDQgMi44MyAzLjc2IDUuMTUgNi41OSA2LjU5bDIuMi0yLjJjLjI4LS4yOC42Ny0uMzYgMS4wMi0uMjVjMS4xMi4zNyAyLjMyLjU3IDMuNTcuNTdhMSAxIDAgMCAxIDEgMVYyMGExIDEgMCAwIDEtMSAxQTE3IDE3IDAgMCAxIDMgNGExIDEgMCAwIDEgMS0xaDMuNWExIDEgMCAwIDEgMSAxYzAgMS4yNS4yIDIuNDUuNTcgMy41N2MuMTEuMzUuMDMuNzQtLjI1IDEuMDJ6Ii8+PC9zdmc+"
           alt="Phone icon"
           className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
         />
-      </article>
+      </button>
 
-      <article className="bg-[#59708A] w-max p-1 rounded-md">
+      <button className="bg-[#59708A] w-max p-1 rounded-md hover:scale-105 transition-all duration-200">
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMjM0OCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+PHJlY3Qgd2lkdGg9IjE4LjUiIGhlaWdodD0iMTUuNSIgeD0iMi43NSIgeT0iNC4yNSIgcng9IjMiLz48cGF0aCBkPSJtMi43NSA4bDguNDE1IDMuODY2YTIgMiAwIDAgMCAxLjY3IDBMMjEuMjUgOCIvPjwvZz48L3N2Zz4="
           alt="Mail icon"
           className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
         />
-      </article>
+      </button>
     </div>
   );
 };

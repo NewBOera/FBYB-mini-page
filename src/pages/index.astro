@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import About from '../sections/About.astro';
-
+import Why from '../sections/Why.astro';
+import Included from '../sections/Included.astro';
+import How from '../sections/How.astro';
 import NavbarMobile from '../components/header/NavbarMobile.astro';
 import NavbarDesktop from '../components/header/NavbarDesktop.astro';
-import Home from '../sections/Home/Home.astro';
 import Book from '../sections/Book/Book.astro';
 import WhyUs from '../sections/WhyUs.astro';
+import Home from '../sections/Home/Home.astro';
+import Everything from '../sections/Everything.astro';
 ---
 
 <Layout title="">
@@ -18,7 +20,11 @@ import WhyUs from '../sections/WhyUs.astro';
 
   <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
     <Home />
-    <Book />
+    <Why />
+    <Included />
+    <How />
+    <Everything />
     <WhyUs />
+    <Book />
   </main>
 </Layout>
