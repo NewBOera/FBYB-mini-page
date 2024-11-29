@@ -5,18 +5,18 @@ import SectionStructure from '../structures/SectionStructure.astro';
 <SectionStructure idSection="included" sectionClasses="" wrapperClasses="   ">
   <article class="flex lg:min-h-[700px]">
     <!--Principal -->
-    <div class="flex flex-col lg:flex-row gap-4 bg-pink-500 pl-8 py-12 lg:px-10 rounded-r-[10px] w-[85%] lg:w-[70%] text-white">
+    <div class="flex flex-col lg:flex-row gap-4 bg-blueBg pl-8 py-12 lg:px-10 rounded-r-[10px] w-[85%] lg:w-[70%] text-white">
       <div class="flex">
         <div class="w-[10%]">
           <img src="/public/assets/Included/bullet.png" class="object-contain" alt="" />
         </div>
         <div class="w-[90%] flex flex-col gap-2">
-          <h2 class="Giyaste text-3xl tracking-[.2rem] uppercase">What’s <br /> Included?</h2>
-          <p class="text-[#A7B3C7] text-sm">An All-Inclusive Experience Tailored for You We make your journey simple and seamless:</p>
+          <h2 class="Giyaste text-3xl lg:text-[40px]/[48px] lg:tracking-[.4rem] tracking-[.2rem] uppercase">What’s <br /> Included?</h2>
+          <p class="text-[#A7B3C7] text-sm lg:text-base lg:w-[80%] lg:pr-10">An All-Inclusive Experience Tailored for You We make your journey simple and seamless:</p>
         </div>
       </div>
 
-      <article class="flex flex-col bg-purple-700 lg:justify-evenly gap-3">
+      <article class="flex flex-col lg:justify-evenly gap-3">
         <div class="flex flex-col gap-1">
           <img src="/public/assets/Included/1.png" class="w-[41px] h-[41px] object-contain" alt="" />
           <h4 class="font-medium text-lg">Flights to and from Dubai</h4>
@@ -45,18 +45,20 @@ import SectionStructure from '../structures/SectionStructure.astro';
       <p class="text-[#E8D6AD] lg:hidden font-bold text-xl mt-5">Your journey is designed to focus on what matters – finding your perfect property.</p>
     </div>
     <!--Lateral -->
-    <div class="rounded-l-[10px] w-[15%] bg-orange-300 lg:w-[30%] pr-8 py-12">
-      <div class="lg:flex flex-col text-white gap-1 hidden">
-        <img src="/public/assets/Included/4.png" class="w-[41px] h-[41px] object-contain" alt="" />
-        <h4 class="font-medium text-lg">Guided tours of the most exclusive properties</h4>
-      </div>
+    <div class="rounded-l-[10px] flex flex-col justify-evenly w-[15%] bg-blueBg lg:w-[30%] pr-8 py-12">
+      <div class="h-full justify-evenly flex flex-col gap-3">
+        <div class="lg:flex flex-col text-white gap-1 hidden">
+          <img src="/public/assets/Included/4.png" class="w-[41px] h-[41px] object-contain" alt="" />
+          <h4 class="font-medium text-lg">Guided tours of the most exclusive properties</h4>
+        </div>
 
-      <div class="lg:flex flex-col text-white gap-1 hidden">
-        <img src="/public/assets/Included/5.png" class="w-[41px] h-[41px] object-contain" alt="" />
-        <h4 class="font-medium text-lg">Expert consultants to guide your investment decisions</h4>
-      </div>
+        <div class="lg:flex flex-col text-white gap-1 hidden">
+          <img src="/public/assets/Included/5.png" class="w-[41px] h-[41px] object-contain" alt="" />
+          <h4 class="font-medium text-lg">Expert consultants to guide your investment decisions</h4>
+        </div>
 
-      <p class="text-[#E8D6AD] lg:block hidden font-bold text-xl mt-5">Your journey is designed to focus on what matters – finding your perfect property.</p>
+        <p class="text-[#E8D6AD] lg:block hidden font-bold text-xl mt-5">Your journey is designed to focus on what matters – finding your perfect property.</p>
+      </div>
     </div>
   </article>
 </SectionStructure>
