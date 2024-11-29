@@ -13,23 +13,3 @@ const { id, wrapperClasses, sectionClasses } = Astro.props;
     <slot />
   </div>
 </section>
-
-<style>
-  .home-section {
-    min-height: max-content;
-  }
-  @media (min-width: 1524px) {
-    .home-section {
-      height: calc(100vh);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .home-section {
-      height: calc(100vh);
-      min-height: 800px;
-    }
-  }
-
-  /* Here you can add more styles to your heros sections */
-</style>

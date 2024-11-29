@@ -1,0 +1,18 @@
+.form-control {
+  width: 100% !important;
+  padding: 29px 0 !important;
+  padding-left: 50px !important;
+  color: white !important;
+  outline: none !important;
+  border-radius: 6px !important;
+  background: #f8fbff33 !important;
+  border: 1px solid #ffffff44 !important;
+}
+
+.flag-dropdown {
+  background: #f8fbff33 !important;
+}
+
+.selected-flag {
+  background: #f8fbff33 !important;
+}
