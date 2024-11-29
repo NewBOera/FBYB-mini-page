@@ -76,7 +76,7 @@ export const FormComponent = () => {
         </div>
 
         <div className="flex flex-col-reverse gap-4 mt-8 lg:flex-row lg:gap-6">
-          <p className="text-[#A7B3C7] font-medium text-xs text-center px-6 lg:text-start lg:w-6/12">
+          <p className="text-[#A7B3C7] font-light text-xs text-center px-6 lg:text-start lg:w-6/12">
             Your details are safe with us. We respect your privacy and use your information solely to assist you with your inquiry.
           </p>
           <button type="submit" className="bg-yellow text-blueBg text-lg font-medium py-3 rounded-md lg:w-6/12">
