@@ -6,11 +6,11 @@ interface Props {
 const { isLanding } = Astro.props;
 ---
 
-<header class="flex flex-col items-center justify-center lg:hidden fixed w-full max-w-full z-50 shadow-[0px_10px_50px_-30px_#00000024]">
+<header class="flex flex-col items-center justify-center md:hidden fixed w-full max-w-full z-50 shadow-[0px_10px_50px_-30px_#00000024]">
   <nav class="flex w-full sm:px-10 z-40 relative justify-between h-[100px] px-8 bg-[#FFFFFF]">
     <div class="text-lg flex gap-4 items-center">
       <a class="flex items-center gap-2" href={isLanding ? '#home-section' : 'index.html'}>
-        <img class="object-contain" src="/public/assets/navbar/logo.png" alt="Logo" title="" />
+        <img class="object-contain w-[110px]" src="/public/assets/navbar/logo.png" alt="FBYB Logo" title="Fly Before You Build" />
       </a>
     </div>
 
@@ -28,17 +28,76 @@ const { isLanding } = Astro.props;
 
   <div
     id="menu"
-    class="text-yellow bg-white text-[#7F5A83] -translate-x-[768px] w-full h-[250px] border-b-[0.5px] shadow-md border-[#F5E2C8] transition-all ease-in-out duration-200 flex items-center absolute z-10 top-[80px] right-0 left-0 rounded-br-[100px] md:hidden"
+    class="bg-menu-navbar -translate-x-[768px] w-full h-screen shadow-md transition-all ease-in-out duration-200 flex flex-col gap-12 justify-center absolute z-10 top-0 right-0 left-0 md:hidden text-[#FFFFFF] px-8"
   >
-    <div class="w-[200px] p-5 rounded-r-[50px]">
-      <ul class="flex flex-col md:text-lg gap-5">
-        <li class="text-base font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#home-section' : 'index.html'}>Home</a></li>
-        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#about-us-section' : 'index.html#about-us-section'}>About Us</a></li>
-        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#packages-section' : 'index.html#packages-section'}>Packages</a></li>
-        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#contact' : 'index.html#contact'}>Contact</a></li>
-        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#subscription-section' : 'index.html#subscription-section'}>Live and Suscription</a></li>
-        <li class="font-medium leading-[normal]"><a onclick=" toggleMenu()" href={isLanding ? '#faq-section' : 'index.html#faq-section'}>FAQ</a></li>
-      </ul>
+    <div class="pb-6 border-b-yellow border-2 border-t-0 border-r-0 border-l-0">
+      <h4 class="Satoshi-bold text-3xl">FLY BEFORE YOU BUY</h4>
+      <h6 class="font-normal text-lg">Fly to Dubai, See the Future, Make It Yours</h6>
     </div>
+
+    <h2 class="Giyaste text-4xl tracking-widest">A VIP JOURNEY AWAITS.</h2>
+
+    <ul class="flex flex-col gap-10 w-full">
+      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
+        <a href="#home-section" class="text-lg">Home</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
+        <a href="#why-dubai-section" class="text-lg">Why Dubai?</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
+        <a href="#whats-included-section" class="text-lg">What's Included?</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+
+      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
+        <a href="#how-section" class="text-lg">How It Works</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+
+      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
+        <a href="#why-us-section" class="text-lg">Why Us?</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+
+      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
+        <a href="#book-section" class="text-lg">Book Now</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+    </ul>
   </div>
 </header>
+
+<style>
+  .bg-menu-navbar {
+    background-image: linear-gradient(rgba(0, 0.137, 0.282, 0.7), rgba(0, 0.137, 0.282, 0.7)), url('/public/assets/navbar/navbar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>

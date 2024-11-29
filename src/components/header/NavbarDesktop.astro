@@ -6,8 +6,38 @@ interface Props {
 const { isLanding } = Astro.props;
 ---
 
-<header class="hidden text-black justify-center items-center lg:flex fixed max-w-full z-50 bg-[#FFFFFF] w-full shadow-[0px_10px_50px_-30px_#00000024]">
+<header class="hidden text-black justify-center items-center md:flex fixed max-w-full z-50 bg-[#FFFFFF] w-full shadow-[0px_10px_50px_-30px_#00000024]">
   <nav class="flex w-full justify-between items-center rounded-xl mx-6 md:px-8 lg:px-0 lg:mx-3 h-[80px] lg:w-[1200px] xl:w-[1300px] bg-[#FFFFFF]">
-    <a href={isLanding ? '#home-section' : 'index.html'}><img class="object-contain w-28 h-28 shrink-0" src="/public/assets/navbar/logo.png" alt="Logo" title="Fly Before You Buy" /></a>
+    <a href={isLanding ? '#home-section' : 'index.html'}>
+      <img class="object-contain w-[120px] h-[120px] xl:w-[130px] xl:h-[130px] shrink-0" src="/public/assets/navbar/logo.png" alt="Logo" title="Fly Before You Buy" />
+    </a>
+
+    <ul class="flex gap-6">
+      <li class="flex items-center gap-4">
+        <a id-nav="home-section" href={isLanding ? '#home-section' : 'index.html'} class="text-lg nav-item hover:text-blueBg transition-all duration-100 hover:font-semibold">Home</a>
+      </li>
+      <li class="flex items-center gap-4">
+        <a id-nav="why-dubai-section" href={isLanding ? '#why-dubai-section' : 'index.html#why-dubai-section'} class="text-lg nav-item">Why Dubai?</a>
+      </li>
+      <li class="flex items-center gap-4">
+        <a id-nav="whats-included-section" href={isLanding ? '#whats-included-section' : 'index.html#whats-included-section'} class="text-lg nav-item">What's Included?</a>
+      </li>
+      <li class="flex items-center gap-4">
+        <a id-nav="how-section" href={isLanding ? '#how-section' : 'index.html#how-section'} class="text-lg nav-item">How It Works</a>
+      </li>
+      <li class="flex items-center gap-4">
+        <a id-nav="why-us-section" href={isLanding ? '#why-us-section' : 'index.html#why-us-section'} class="text-lg nav-item">Why Us?</a>
+      </li>
+      <li class="flex items-center gap-4">
+        <a id-nav="book-section" href={isLanding ? '#book-section' : 'index.html#book-section'} class="text-lg nav-item">Book Now</a>
+      </li>
+    </ul>
   </nav>
 </header>
+
+<style>
+  .active {
+    color: #002348;
+    font-weight: bolder;
+  }
+</style>
