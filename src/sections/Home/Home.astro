@@ -8,7 +8,7 @@ import HeroFormSection from './HomeFormSection';
   <div class="p-3 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-md h-max">
     <img src="/public/assets/home/hero.png" class="h-[150px] sm:h-[300px] md:h-[400px] w-full object-cover rounded-md" alt="" />
 
-    <div class="mt-6 flex flex-col gap-10 lg:flex-row">
+    <div class="mt-6 flex flex-col gap-10 lg:flex-row lg:justify-around">
       <div class="flex flex-col items-center justify-center gap-8 lg:w-6/12 lg:mt-20">
         <article class="flex justify-center gap-4">
           <img
@@ -47,7 +47,9 @@ import HeroFormSection from './HomeFormSection';
         </ul>
       </div>
 
-      <HeroFormSection client:only="react" />
+      <div class="flex justify-center lg:w-5/12 xl:w-7/12">
+        <HeroFormSection client:only="react" />
+      </div>
     </div>
   </div>
 </HeroStructure>

@@ -1,0 +1,20 @@
+---
+import SectionStructure from '../../structures/SectionStructure.astro';
+import { RegisterForm } from './RegisterForm';
+---
+
+<SectionStructure idSection="why-us">
+  <h2 class="text-center Giyaste text-2xl tracking-widest lg:text-3xl lg:tracking-[0.50rem]">BOOK YOUR TRIP NOW</h2>
+  <div class="flex flex-col-reverse items-center gap-10 lg:flex-row-reverse lg:justify-around rounded-md shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] w-full p-4">
+    <article class="w-full lg:w-6/12 xl:w-[50%] flex flex-col items-center gap-8">
+      <div class="flex flex-col gap-6 max-w-[500px] w-fulls">
+        <h3 class="text-blueBg font-medium text-lg xl:text-xl">Fill in a couple of details and <br /> let us handle the rest.</h3>
+        <RegisterForm client:only="react" />
+      </div>
+    </article>
+
+    <article class="flex flex-col gap-4 justify-center items-center w-full lg:w-6/12 xl:w-[50%] lg:gap-8 lg:justify-center">
+      <img class="h-full w-full" src="/public/assets/why-us.png" alt="" />
+    </article>
+  </div>
+</SectionStructure>
