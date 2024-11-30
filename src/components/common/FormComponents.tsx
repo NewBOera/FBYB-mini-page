@@ -91,6 +91,7 @@ export const FormComponent = () => {
 };
 
 export const CountDown = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -98,8 +99,6 @@ export const CountDown = () => {
     seconds: 0,
   });
 
-  const [existCookie, setExistCookie] = useState(null);
-  const [countdownStart, setCountdownStart] = useState(null);
   const [spots, setSpots] = useState(Math.floor(Math.random() * 16) + 1);
 
   useEffect(() => {
@@ -123,21 +122,32 @@ export const CountDown = () => {
       const endDate = new Date(startDate);
       endDate.setDate(startDate.getDate() + 15);
 
-      const now = new Date();
-      if (endDate > now) {
-        setExistCookie(true);
-        setCountdownStart(true);
-
-        // @ts-expect-error timeDiff is not necesary
+      const updateCountdown = () => {
+        const now = new Date();
+        // @ts-expect-error endDate is a Date object
         const timeDiff = endDate - now;
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
-        const seconds = Math.floor((timeDiff / 1000) % 60);
-        setTimeLeft({ days, hours, minutes, seconds });
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
+
+        if (timeDiff > 0) {
+          const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+          const seconds = Math.floor((timeDiff / 1000) % 60);
+
+          setTimeLeft({ days, hours, minutes, seconds });
+        } else {
+          setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+          return;
+        }
+
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1500);
+      };
+
+      updateCountdown();
+      const interval = setInterval(updateCountdown, 1000);
+
+      return () => clearInterval(interval);
     };
 
     initializeCountdown();
@@ -148,16 +158,17 @@ export const CountDown = () => {
       <article className="flex gap-6">
         <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
           <h4 className="text-xs">DAYS</h4>
-          {timeLeft.days > 0 ? <span className="font-semibold text-2xl">{timeLeft.days}</span> : <l-ring size="40" stroke="5" bg-opacity="0" speed="2" color="white"></l-ring>}
+          {isLoading ? <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="white"></l-ring> : <span className="font-semibold text-2xl">{timeLeft.days}</span>}
         </div>
+
         <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
           <h4 className="text-xs">LIMITED OFFER</h4>
-          {timeLeft.days > 0 && timeLeft.hours > 0 && timeLeft.minutes && timeLeft.seconds > 0 ? (
-            <span className="font-semibold text-2xl">
-              {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
-            </span>
+          {isLoading ? (
+            <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="white"></l-ring>
           ) : (
-            <l-ring size="40" stroke="5" bg-opacity="0" speed="2" color="white"></l-ring>
+            <span className="font-semibold text-2xl">
+              {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
+            </span>
           )}
         </div>
       </article>
