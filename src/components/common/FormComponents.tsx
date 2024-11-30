@@ -4,6 +4,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import PhoneInput from 'react-phone-input-2';
 import { getCookie, setCookie } from '../../../public/scripts/cookies';
+import { ring } from 'ldrs';
 
 export const InputField = ({ label, ...props }) => {
   // @ts-expect-error props are not necesary
@@ -102,33 +103,33 @@ export const CountDown = () => {
   const [spots, setSpots] = useState(Math.floor(Math.random() * 16) + 1);
 
   useEffect(() => {
-    const cookie = getCookie('countdown_FBYB_MiniPage');
-    const countdownStart = localStorage.getItem('countdownStart');
-
-    if (!cookie || !countdownStart) {
-      const startDate = new Date();
-      localStorage.setItem('countdownStart', startDate.toISOString());
-      setCookie('countdown_FBYB_MiniPage', 'true', 15);
-      return;
-    }
-
-    setExistCookie(true);
-    setCountdownStart(true);
+    ring.register();
   }, []);
 
   useEffect(() => {
-    if (!existCookie || !countdownStart) return;
+    const initializeCountdown = () => {
+      const cookie = getCookie('countdown_FBYB_MiniPage');
+      const storedStartDate = localStorage.getItem('countdownStart');
+      let startDate;
 
-    const updateCountdown = () => {
-      const startDate = new Date(localStorage.getItem('countdownStart'));
+      if (!cookie || !storedStartDate) {
+        startDate = new Date();
+        localStorage.setItem('countdownStart', startDate.toISOString());
+        setCookie('countdown_FBYB_MiniPage', 'true', 15);
+      } else {
+        startDate = new Date(storedStartDate);
+      }
+
       const endDate = new Date(startDate);
       endDate.setDate(startDate.getDate() + 15);
 
       const now = new Date();
-      // @ts-expect-error endDate is a Date object
-      const timeDiff = endDate - now;
+      if (endDate > now) {
+        setExistCookie(true);
+        setCountdownStart(true);
 
-      if (timeDiff > 0) {
+        // @ts-expect-error timeDiff is not necesary
+        const timeDiff = endDate - now;
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
@@ -139,30 +140,31 @@ export const CountDown = () => {
       }
     };
 
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-
-    return () => clearInterval(interval);
-  }, [existCookie, countdownStart]);
+    initializeCountdown();
+  }, []);
 
   return (
     <article className="w-full flex justify-between text-white">
       <article className="flex gap-6">
         <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
           <h4 className="text-xs">DAYS</h4>
-          <span className="font-semibold text-2xl">{timeLeft.days}</span>
+          {timeLeft.days > 0 ? <span className="font-semibold text-2xl">{timeLeft.days}</span> : <l-ring size="40" stroke="5" bg-opacity="0" speed="2" color="white"></l-ring>}
         </div>
         <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
           <h4 className="text-xs">LIMITED OFFER</h4>
-          <span className="font-semibold text-2xl">
-            {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
-          </span>
+          {timeLeft.days > 0 && timeLeft.hours > 0 && timeLeft.minutes && timeLeft.seconds > 0 ? (
+            <span className="font-semibold text-2xl">
+              {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+            </span>
+          ) : (
+            <l-ring size="40" stroke="5" bg-opacity="0" speed="2" color="white"></l-ring>
+          )}
         </div>
       </article>
 
       <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
         <h4 className="text-xs">SPOTS</h4>
-        <span className="font-semibold text-2xl">{spots}</span>
+        {spots && <span className="font-semibold text-2xl">{spots}</span>}
       </div>
     </article>
   );

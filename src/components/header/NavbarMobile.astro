@@ -38,33 +38,24 @@ const { isLanding } = Astro.props;
     <h2 class="Giyaste text-4xl tracking-widest">A VIP JOURNEY AWAITS.</h2>
 
     <ul class="flex flex-col gap-10 w-full">
-      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
-        <a href="#home-section" class="text-lg">Home</a>
+      <li class="w-full flex items-center justify-between">
+        <a href="#home-section" onclick=" toggleMenu()" class="text-lg">Home</a>
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
           alt="Arrow icon"
           class="w-5 h-5 object-contain"
         />
       </li>
-      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
-        <a href="#why-dubai-section" class="text-lg">Why Dubai?</a>
+      <li class="w-full flex items-center justify-between">
+        <a href="#why-dubai-section" onclick=" toggleMenu()" class="text-lg">Why Dubai?</a>
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
           alt="Arrow icon"
           class="w-5 h-5 object-contain"
         />
       </li>
-      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
-        <a href="#whats-included-section" class="text-lg">What's Included?</a>
-        <img
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
-          alt="Arrow icon"
-          class="w-5 h-5 object-contain"
-        />
-      </li>
-
-      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
-        <a href="#how-section" class="text-lg">How It Works</a>
+      <li class="w-full flex items-center justify-between">
+        <a href="#whats-included-section" onclick=" toggleMenu()" class="text-lg">What's Included?</a>
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
           alt="Arrow icon"
@@ -72,8 +63,8 @@ const { isLanding } = Astro.props;
         />
       </li>
 
-      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
-        <a href="#why-us-section" class="text-lg">Why Us?</a>
+      <li class="w-full flex items-center justify-between">
+        <a href="#how-section" onclick=" toggleMenu()" class="text-lg">How It Works</a>
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
           alt="Arrow icon"
@@ -81,8 +72,17 @@ const { isLanding } = Astro.props;
         />
       </li>
 
-      <li class="w-full flex items-center justify-between" onclick=" toggleMenu()">
-        <a href="#book-section" class="text-lg">Book Now</a>
+      <li class="w-full flex items-center justify-between">
+        <a href="#why-us-section" onclick=" toggleMenu()" class="text-lg">Why Us?</a>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+          alt="Arrow icon"
+          class="w-5 h-5 object-contain"
+        />
+      </li>
+
+      <li class="w-full flex items-center justify-between">
+        <a href="#book-section" onclick=" toggleMenu()" class="text-lg">Book Now</a>
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
           alt="Arrow icon"
