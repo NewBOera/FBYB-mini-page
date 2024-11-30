@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useField } from 'formik';
+import { useField, useFormikContext } from 'formik';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import PhoneInput from 'react-phone-input-2';
@@ -11,6 +11,7 @@ interface FormData {
   firstName: string;
   lastName: string;
   email: string;
+  phone: string;
 }
 
 export const InputField = ({ label, ...props }) => {
@@ -33,11 +34,11 @@ export const InputField = ({ label, ...props }) => {
   );
 };
 
-export const FormComponent = () => {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzbHWLAai-gYTEehKqLWQ_CDoNdY5WfZq69f2b9rh5AL-oFWtZynx1KKgQUtVmVvCDi/exec';
+export const PhoneField = ({ label, ...props }) => {
   const [country, setCountry] = useState('');
-  const [phoneInput, setPhoneInput] = useState<string>('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { setFieldValue, values } = useFormikContext();
+  // @ts-expect-error props are not necesary
+  const [field, meta] = useField(props);
 
   useEffect(() => {
     const getCountryUser = async () => {
@@ -47,6 +48,31 @@ export const FormComponent = () => {
     };
     getCountryUser();
   }, []);
+
+  const handlePhoneChange = value => {
+    setFieldValue(props.name, value);
+  };
+
+  return (
+    <div className="flex flex-col gap-1 text-start">
+      <label className="text-sm text-white" htmlFor={props.id || props.name}>
+        {label}*
+      </label>
+      <PhoneInput
+        country={country}
+        value={values[props.name]}
+        onChange={handlePhoneChange}
+        inputClass={`w-full py-4 px-2 text-white outline-none rounded-md bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] ${meta.touched && meta.error ? 'input-error' : ''}`}
+      />
+      {meta.touched && meta.error ? <span className="text-red-500 text-xs font-principal-light">{meta.error}</span> : null}
+    </div>
+  );
+};
+
+export const FormComponent = () => {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzbHWLAai-gYTEehKqLWQ_CDoNdY5WfZq69f2b9rh5AL-oFWtZynx1KKgQUtVmVvCDi/exec';
+  const [phoneInput, setPhoneInput] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onPhoneChange = (value: string) => setPhoneInput(value);
 
@@ -60,7 +86,7 @@ export const FormComponent = () => {
           firstName: data.firstName,
           lastName: data.lastName,
           email: data.email,
-          phone: phoneInput,
+          phone: data.phone,
         }).toString(),
       });
 
@@ -77,48 +103,46 @@ export const FormComponent = () => {
   }
 
   return (
-    <>
-      <Formik
-        initialValues={{
-          firstName: '',
-          lastName: '',
-          email: '',
-        }}
-        validationSchema={Yup.object({
-          firstName: Yup.string().min(2, 'The name must have at least 2 characters').required('You must enter a name'),
-          lastName: Yup.string().min(2, 'The last name must have at least 2 characters').required('You must enter a last name'),
-          email: Yup.string().min(5, 'The email address must have at least 5 characters').email('Invalid email address').required('You must enter an email address'),
-        })}
-        onSubmit={async (values, { setSubmitting }) => {
-          try {
-            await handleSubmit(values);
-          } catch (error) {
-            console.error('Error verificando si el usuario está registrado:', error);
-          } finally {
-            setSubmitting(false);
-          }
-        }}
-      >
-        <Form className="flex flex-col gap-4">
-          <InputField label="First Name" name="firstName" type="text" placeholder="Enter your first name" />
-          <InputField label="Last Name" name="lastName" type="text" placeholder="Enter your last name" />
-          <InputField label="Email" name="email" type="email" placeholder="Enter your email" />
-          <div className="flex flex-col gap-1 text-start">
-            <label className="text-sm text-white">Phone number*</label>
-            <PhoneInput country={country} onChange={onPhoneChange} />
-          </div>
+    <Formik
+      initialValues={{
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+      }}
+      validationSchema={Yup.object({
+        firstName: Yup.string().min(2, 'The name must have at least 2 characters').required('You must enter a name'),
+        lastName: Yup.string().min(2, 'The last name must have at least 2 characters').required('You must enter a last name'),
+        email: Yup.string().min(5, 'The email address must have at least 5 characters').email('Invalid email address').required('You must enter an email address'),
+        phone: Yup.string().required('You must enter a phone number'),
+      })}
+      onSubmit={async (values, { setSubmitting }) => {
+        try {
+          alert(values.phone);
+          await handleSubmit(values);
+        } catch (error) {
+          console.error('Error verificando si el usuario está registrado:', error);
+        } finally {
+          setSubmitting(false);
+        }
+      }}
+    >
+      <Form className="flex flex-col gap-4">
+        <InputField label="First Name" name="firstName" type="text" placeholder="Enter your first name" />
+        <InputField label="Last Name" name="lastName" type="text" placeholder="Enter your last name" />
+        <InputField label="Email" name="email" type="email" placeholder="Enter your email" />
+        <PhoneField label="Phone" name="phone" type="tel" placeholder="Enter your phone number" onChange={onPhoneChange} />
 
-          <div className="flex flex-col-reverse gap-4 mt-8 lg:flex-row lg:gap-6">
-            <p className="text-[#A7B3C7] font-light text-xs text-center px-6 lg:text-start lg:w-6/12">
-              Your details are safe with us. We respect your privacy and use your information solely to assist you with your inquiry.
-            </p>
-            <button type="submit" className="bg-yellow text-blueBg text-lg font-medium py-3 rounded-md lg:w-6/12 hover:scale-95 transition-all duration-200">
-              {isSubmitting ? <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="#002348"></l-ring> : 'Book My Free Call'}
-            </button>
-          </div>
-        </Form>
-      </Formik>
-    </>
+        <div className="flex flex-col-reverse gap-4 mt-8 lg:flex-row lg:gap-6">
+          <p className="text-[#A7B3C7] font-light text-xs text-center px-6 lg:text-start lg:w-6/12">
+            Your details are safe with us. We respect your privacy and use your information solely to assist you with your inquiry.
+          </p>
+          <button type="submit" className="bg-yellow text-blueBg text-lg font-medium py-3 rounded-md lg:w-6/12 hover:scale-95 transition-all duration-200">
+            {isSubmitting ? <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="#002348"></l-ring> : 'Book My Free Call'}
+          </button>
+        </div>
+      </Form>
+    </Formik>
   );
 };
 
