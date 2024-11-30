@@ -118,7 +118,6 @@ export const FormComponent = () => {
       })}
       onSubmit={async (values, { setSubmitting }) => {
         try {
-          alert(values.phone);
           await handleSubmit(values);
         } catch (error) {
           console.error('Error verificando si el usuario está registrado:', error);
