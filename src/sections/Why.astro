@@ -5,43 +5,52 @@ import SectionStructure from '../structures/SectionStructure.astro';
 <SectionStructure idSection="why-dubai" sectionClasses="p-4" wrapperClasses="  p-8 ">
   <article class="flex items-center flex-col md:flex-row md:items-center gap-5">
     <div class="flex flex-col gap-4 md:w-1/2">
-      <div class="flex justify-center gap-3">
+      <!-- <div class="flex justify-center gap-3">
         <img src="/public/assets/Why/star.png" alt="" />
         <img src="/public/assets/Why/star.png" alt="" />
         <img src="/public/assets/Why/star.png" alt="" />
-      </div>
+      </div> -->
 
       <div class="flex flex-col items-center gap-2 lg:gap-1">
-        <h2 class="text-[28px] Giyaste tracking-[0.15rem] lg:text-[50px] lg:tracking-[.4rem] uppercase text-center">Why Dubai?</h2>
+        <h2 class="text-[28px] Giyaste tracking-[0.15rem] lg:text-[50px] xl:text-[55px] lg:tracking-[.4rem] uppercase text-center">Why Dubai?</h2>
         <span class="uppercase text-[#606773] lg:text-sm"><span class="font-bold">Dubai:</span> The City of Opportunity</span>
       </div>
 
-      <article class="flex flex-wrap [&>div]:w-[45%] [&>div]:lg:w-[35%] lg:justify-evenly justify-center gap-4">
-        <div class="flex flex-col font-bold gap-2 p-2">
-          <img src="/public/assets/Why/1.png" class="w-[32px] h-[32px]" alt="" />
-          <p class="uppercase text-left text-sm">0% Tax on Property Investments</p>
+      <article class="flex flex-wrap [&>div]:w-[45%] [&>div]:lg:w-[37%] lg:justify-evenly justify-center gap-4">
+        <div class="flex flex-col items-center shadow-lg font-bold gap-2 px-4 py-8">
+          <img src="/public/assets/Why/1.png" class="w-[48px] h-[48px]" alt="" />
+          <p class="uppercase text-left text-[#002348] text-sm">0% Tax on Property Investments</p>
         </div>
 
-        <div class="flex flex-col font-bold gap-2 p-2">
-          <img src="/public/assets/Why/2.png" class="w-[32px] h-[32px]" alt="" />
-          <p class="uppercase text-left text-sm">Full Ownership for International Buyers</p>
+        <div class="flex flex-col items-center justify-center shadow-lg font-bold gap-2 px-4 py-8">
+          <img src="/public/assets/Why/2.png" class="w-[48px] h-[48px]" alt="" />
+          <p class="uppercase text-left text-sm text-[#002348]">Full Ownership for International Buyers</p>
         </div>
 
-        <div class="flex flex-col font-bold gap-2 p-2">
-          <img src="/public/assets/Why/3.png" class="w-[32px] h-[32px]" alt="" />
-          <p class="uppercase text-left text-sm">Unmatched Luxury and Premium Locations</p>
+        <div class="flex flex-col items-center justify-center shadow-lg font-bold gap-2 px-4 py-8">
+          <img src="/public/assets/Why/3.png" class="w-[48px] h-[48px]" alt="" />
+          <p class="uppercase text-left text-sm text-[#002348]">Unmatched Luxury and Premium Locations</p>
         </div>
 
-        <div class="flex flex-col font-bold gap-2 p-2">
-          <img src="/public/assets/Why/4.png" class="w-[32px] h-[32px]" alt="" />
-          <p class="uppercase text-left text-sm">A Thriving Hub for Global Business and Lifestyle</p>
+        <div class="flex flex-col items-center justify-center shadow-lg font-bold gap-2 px-4 py-8">
+          <img src="/public/assets/Why/4.png" class="w-[48px] h-[48px]" alt="" />
+          <p class="uppercase text-left text-sm text-[#002348]">A Thriving Hub for Global Business and Lifestyle</p>
         </div>
       </article>
 
-      <div class="w-full gap-[0.5px] max-w-[200px] self-center lg:w-[40%] lg:p-0 lg:gap-0.5 mt-5 flex hover:scale-95 transition-all duration-200">
-        <a class="w-[80%] flex font-medium text-lg xl:text-xl justify-center items-center bg-blue rounded-[8px] p-4 text-white" href="#packages-section">BOOK NOW</a>
-        <div class="bg-blue flex justify-center items-center w-[20%] rounded-l-[8px] rounded-r-[4px] p-4 text-white">
-          <img src="/public/assets/Why/right.png" class="w-full h-auto lg:w-[14px] lg:h-[32px] object-contain" alt="" />
+      <div class="w-full gap-[0.5px] max-w-[200px] self-center lg:w-[50%] xl:w-[65%] lg:p-0 lg:gap-0.5 mt-5 flex group">
+        <a
+          class="w-[75%] transition-all duration-200 flex font-medium text-lg xl:text-xl justify-center items-center bg-[#03264D] rounded-[8px] p-4 text-white group-hover:text-[#03264D] group-hover:bg-[#E8D6AD] group-hover:border group-hover:border-[#7D90A6]"
+          href="#packages-section"
+        >
+          BOOK NOW
+        </a>
+        <div
+          class="bg-[#03264D] transition-all duration-200 flex justify-center items-center w-[25%] rounded-l-[8px] rounded-r-[4px] p-4 text-white group-hover:text-[#03264D] group-hover:bg-[#E8D6AD] group-hover:border group-hover:border-[#7D90A6]"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="21.923076923076923" viewBox="0 0 208 456">
+            <path class="group-hover:fill-[#03264D]" fill="#F8FBFF" d="M9 388q8 4 15 4q11 0 17-6l162-186L41 14Q26-1 11 12Q-4 29 9 42l137 156L9 354q-13 19 0 34"></path>
+          </svg>
         </div>
       </div>
     </div>

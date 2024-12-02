@@ -4,50 +4,60 @@ import HeroFormSection from './HomeFormSection';
 ---
 
 <!-- ? Home section -->
-<HeroStructure id="home-section" sectionClasses="home-section">
+<HeroStructure id="home-section" wrapperClasses="items-center" sectionClasses="home-section">
   <div class="p-3 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-md h-max">
-    <img src="/public/assets/home/hero.png" class="h-[150px] sm:h-[300px] md:h-[400px] w-full object-cover rounded-md" alt="" />
+    <!-- <img src="/public/assets/home/hero.png" class="h-[150px] sm:h-[300px] md:h-[400px] w-full object-cover rounded-md" alt="" /> -->
 
-    <div class="mt-6 flex flex-col gap-10 lg:flex-row lg:justify-around">
-      <div class="flex flex-col items-center justify-center gap-8 lg:w-6/12 lg:mt-20">
+    <div class="flex flex-col gap-10 lg:flex-row lg:justify-around">
+      <div class="flex flex-col bg-hero bg-image pb-44 sm:pb-20 md:p-20 lg:p-0 lg:py-20 lg:px-8 xl:px-12 pt-4 relative items-center lg:justify-start justify-center gap-8 lg:w-8/12">
+        <img src="/public/assets/home/Logo.png" class="hidden md:block absolute top-8 left-8" alt="" />
         <article class="flex justify-center gap-4">
           <img
             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
-            class="w-4 h-4 lg:w-5 lg:h-5 object-contain"
+            class="w-3 h-3 object-contain"
             alt="Star icon"
           />
-
           <img
             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
-            class="w-4 h-4 lg:w-5 lg:h-5 object-contain"
+            class="w-3 h-3 object-contain"
             alt="Star icon"
           />
-
           <img
             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
-            class="w-4 h-4 lg:w-5 lg:h-5 object-contain"
+            class="w-3 h-3 object-contain"
+            alt="Star icon"
+          />
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+            class="w-3 h-3 object-contain"
+            alt="Star icon"
+          />
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+            class="w-3 h-3 object-contain"
             alt="Star icon"
           />
         </article>
 
-        <h1 class="Giyaste text-center text-4xl leading-normal tracking-widest text-blue 2xl:text-4xl xl:font-light xl:tracking-[0.5rem]">
-          SECURE UP TO 15% ROI <br class="hidden xl:block" /> WITH DUBAI’S INVESTMENTS
+        <h1 class="Giyaste text-center w-full text-4xl px-5 lg:px-0 leading-normal tracking-widest text-blue 2xl:text-[34px]/[40.8px] xl:font-light xl:tracking-[0.5rem]">
+          SECURE UP TO <span class="text-[#B18E3B] font-bold">15% ROI</span>
+          WITH DUBAI’S INVESTMENTS
         </h1>
 
         <ul class="list-none w-max text-[#606773] text-lg flex flex-col gap-4 lg:font-light xl:text-xl">
           <li class="relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-[#B18E3B]">
-            <span class="text-[#B18E3B] Satoshi-bold">0% tax</span> on property
+            <span class="text-[#B18E3B] Satoshi-bold">0% Tax</span> on Property
           </li>
           <li class="relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-[#B18E3B]">
-            Full property <span class="text-[#B18E3B] Satoshi-bold">ownership</span>
+            Full Property <span class="text-[#B18E3B] Satoshi-bold">Ownership</span>
           </li>
           <li class="relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-[#B18E3B]">
-            Payment in <span class="text-[#B18E3B] Satoshi-bold">any currency</span>
+            Payment in <span class="text-[#B18E3B] Satoshi-bold">Any Currency</span>
           </li>
         </ul>
       </div>
 
-      <div class="flex justify-center lg:w-5/12 xl:w-7/12">
+      <div class="flex justify-center lg:w-6/12 xl:w-7/12">
         <HeroFormSection client:only="react" />
       </div>
     </div>
@@ -57,5 +67,21 @@ import HeroFormSection from './HomeFormSection';
 <style is:global>
   .list-custom::marker {
     color: #b18e3b; /* Cambia al color deseado */
+  }
+
+  .bg-hero {
+    background: url('/public/assets/home/mobile.png');
+  }
+
+  @media (min-width: 1024px) {
+    .bg-hero {
+      background: url('/public/assets/home/desktop.png');
+    }
+  }
+
+  .bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 </style>

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Why from '../sections/Why.astro';
-import Included from '../sections/Included.astro';
+import Included from '../sections/Included/Included.astro';
 import How from '../sections/How.astro';
 import NavbarMobile from '../components/header/NavbarMobile.astro';
 import NavbarDesktop from '../components/header/NavbarDesktop.astro';
@@ -18,7 +18,7 @@ import Everything from '../sections/Everything.astro';
   <!-- ? Header section desktop-->
   <NavbarDesktop isLanding={true} />
 
-  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+  <main class="flex flex-col gap-8 md:gap-10 lg:gap-[128px]">
     <Home />
     <Why />
     <Included />

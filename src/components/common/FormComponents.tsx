@@ -132,11 +132,11 @@ export const FormComponent = () => {
         <InputField label="Email" name="email" type="email" placeholder="Enter your email" />
         <PhoneField label="Phone" name="phone" type="tel" placeholder="Enter your phone number" onChange={onPhoneChange} />
 
-        <div className="flex flex-col-reverse gap-4 mt-8 lg:flex-row lg:gap-6">
-          <p className="text-[#A7B3C7] font-light text-xs text-center px-6 lg:text-start lg:w-6/12">
+        <div className="flex flex-col-reverse gap-4 mt-3 ">
+          <p className="text-[#A7B3C7] font-light text-xs text-center px-6 lg:text-start lg:w-full">
             Your details are safe with us. We respect your privacy and use your information solely to assist you with your inquiry.
           </p>
-          <button type="submit" className="bg-yellow text-blueBg text-lg font-medium py-3 rounded-md lg:w-6/12 hover:scale-95 transition-all duration-200">
+          <button type="submit" className="bg-yellow hover:bg-[#C2A86A] font-bold text-blueBg text-lg  py-3 rounded-md lg:w-full \ transition-all duration-200">
             {isSubmitting ? <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="#002348"></l-ring> : 'Book My Free Call'}
           </button>
         </div>
@@ -210,13 +210,13 @@ export const CountDown = () => {
 
   return (
     <article className="w-full flex justify-between text-white">
-      <article className="flex gap-6">
-        <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
+      <article className="flex gap-4">
+        <div className="bg-[#F8FBFF33] text-[#F8FBFFBF]/[75%] xl:w-[65px] max-w-[65px] border-[1px] border-[#FFFFFF44] rounded-md px-6 flex flex-col justify-center items-center">
           <h4 className="text-xs">DAYS</h4>
           {isLoading ? <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="white"></l-ring> : <span className="font-semibold text-2xl">{timeLeft.days}</span>}
         </div>
 
-        <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
+        <div className="bg-[#F8FBFF33] text-[#F8FBFFBF]/[75%] lg:min-w-[140px] xl:w-[150px] px-5 border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
           <h4 className="text-xs">LIMITED OFFER</h4>
           {isLoading ? (
             <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="white"></l-ring>
@@ -228,7 +228,7 @@ export const CountDown = () => {
         </div>
       </article>
 
-      <div className="bg-[#F8FBFF33] border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
+      <div className="bg-[#F8FBFF33] text-[#F8FBFFBF]/[75%] xl:w-[65px] max-w-[65px] border-[1px] border-[#FFFFFF44] rounded-md px-4 flex flex-col justify-center items-center">
         <h4 className="text-xs">SPOTS</h4>
         {spots && <span className="font-semibold text-2xl">{spots}</span>}
       </div>

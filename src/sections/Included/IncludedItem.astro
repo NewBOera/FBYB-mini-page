@@ -1,0 +1,15 @@
+---
+interface Props {
+  imgSrc: string;
+  altText?: string;
+  title: string;
+  paddingx?: string;
+}
+
+const { imgSrc = '/public/assets/Included/1.png', altText = 'Image description', paddingx, title = 'Flights to and from Dubai' } = Astro.props;
+---
+
+<div class=`flex px-6 lg:flex-col lg:items-center lg:text-center justify-between  gap-3 items-center`>
+  <img src={imgSrc} class="w-[45px] h-[45px] object-contain" alt={altText ?? ''} />
+  <h4 class="font-medium text-lg">{title}</h4>
+</div>
