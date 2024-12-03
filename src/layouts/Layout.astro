@@ -20,18 +20,17 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script defer src="/scripts/navbar.js"></script>
-    <script defer src="/scripts/send-form.js"></script>
-    <script defer src="/scripts/cookies.js"></script>
-    <script defer src="https://shualim.online/devs-mx-resources/notify/notify.js"></script>
-    <script defer src="/scripts/scroll-navbar.js"></script>
+    <script defer src="public/scripts/navbar.js"></script>
+    <script defer src="public/scripts/send-form.js"></script>
+    <script defer src="public/scripts/cookies.js"></script>
+    <script defer src="public/scripts/scroll-navbar.js"></script>
 
     <!-- ? Scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--? Styles -->
     <link rel="stylesheet" href="https://shualim.online/devs-mx-resources/notify/notify.css" />
-    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="public/styles/globals.css" />
 
     <!-- ? Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/znb0tzz.css" />
@@ -44,29 +43,29 @@ const { title } = Astro.props;
     <slot />
     <!-- ! Footer -->
     <Footer />
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // @ts-expect-error
-        ScrollReveal().reveal('.animate-section', {
-          duration: 800,
-          origin: 'bottom',
-          distance: '50px',
-          easing: 'ease-in-out',
-          reset: false,
-        });
-
-        // @ts-expect-error
-        ScrollReveal().reveal('.animate-hero', {
-          duration: 600,
-          origin: 'left',
-          distance: '30px',
-          easing: 'ease-in-out',
-          reset: false,
-        });
-      });
-    </script>
   </body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // @ts-expect-error
+      ScrollReveal().reveal('.animate-section', {
+        duration: 800,
+        origin: 'bottom',
+        distance: '50px',
+        easing: 'ease-in-out',
+        reset: false,
+      });
+
+      // @ts-expect-error
+      ScrollReveal().reveal('.animate-hero', {
+        duration: 600,
+        origin: 'left',
+        distance: '30px',
+        easing: 'ease-in-out',
+        reset: false,
+      });
+    });
+  </script>
 </html>
 
 <style is:global>

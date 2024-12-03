@@ -8,8 +8,7 @@ import { ring } from 'ldrs';
 import { toast } from 'sonner';
 
 interface FormData {
-  firstName: string;
-  lastName: string;
+  Name: string;
   email: string;
   phone: string;
 }
@@ -83,8 +82,7 @@ export const FormComponent = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
-          firstName: data.firstName,
-          lastName: data.lastName,
+          firstName: data.Name,
           email: data.email,
           phone: data.phone,
         }).toString(),
@@ -105,14 +103,12 @@ export const FormComponent = () => {
   return (
     <Formik
       initialValues={{
-        firstName: '',
-        lastName: '',
+        Name: '',
         email: '',
         phone: '',
       }}
       validationSchema={Yup.object({
-        firstName: Yup.string().min(2, 'The name must have at least 2 characters').required('You must enter a name'),
-        lastName: Yup.string().min(2, 'The last name must have at least 2 characters').required('You must enter a last name'),
+        Name: Yup.string().min(2, 'The name must have at least 2 characters').required('You must enter a name'),
         email: Yup.string().min(5, 'The email address must have at least 5 characters').email('Invalid email address').required('You must enter an email address'),
         phone: Yup.string().required('You must enter a phone number'),
       })}
@@ -127,8 +123,7 @@ export const FormComponent = () => {
       }}
     >
       <Form className="flex flex-col gap-4">
-        <InputField label="First Name" name="firstName" type="text" placeholder="Enter your first name" />
-        <InputField label="Last Name" name="lastName" type="text" placeholder="Enter your last name" />
+        <InputField label="Name" name="Name" type="text" placeholder="Enter your first name" />
         <InputField label="Email" name="email" type="email" placeholder="Enter your email" />
         <PhoneField label="Phone" name="phone" type="tel" placeholder="Enter your phone number" onChange={onPhoneChange} />
 
@@ -216,7 +211,7 @@ export const CountDown = () => {
           {isLoading ? <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="white"></l-ring> : <span className="font-semibold text-2xl">{timeLeft.days}</span>}
         </div>
 
-        <div className="bg-[#F8FBFF33] text-[#F8FBFFBF]/[75%] lg:min-w-[140px] xl:w-[150px] px-5 border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
+        <div className="bg-[#F8FBFF33] text-[#F8FBFFBF]/[75%] w-[135px]  lg:min-w-[140px] xl:w-[150px] px-5 border-[1px] border-[#FFFFFF44] rounded-md p-3 flex flex-col justify-center items-center">
           <h4 className="text-xs">LIMITED OFFER</h4>
           {isLoading ? (
             <l-ring size="30" stroke="2" bg-opacity="0" speed="2" color="white"></l-ring>

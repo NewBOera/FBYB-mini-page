@@ -7,10 +7,10 @@ const { isLanding } = Astro.props;
 ---
 
 <header class="flex flex-col items-center justify-center md:hidden fixed w-full max-w-full z-50 shadow-[0px_10px_50px_-30px_#00000024]">
-  <nav class="flex w-full sm:px-10 z-40 relative justify-between h-[100px] px-8 bg-[#FFFFFF]">
+  <nav class="flex w-full sm:px-10 z-40 relative justify-between h-[80px] px-8 bg-[#FFFFFF]">
     <div class="text-lg flex gap-4 items-center">
       <a class="flex items-center gap-2" href={isLanding ? '#home-section' : 'index.html'}>
-        <img class="object-contain w-[110px]" src="/public/assets/navbar/logo.png" alt="FBYB Logo" title="Fly Before You Build" />
+        <img class="object-contain w-[110px]" src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/navbar/logo.png" alt="FBYB Logo" title="Fly Before You Build" />
       </a>
     </div>
 
@@ -21,14 +21,14 @@ const { isLanding } = Astro.props;
           class="w-7 h-7 object-contain"
           id="menu-icon"
         />
-        <img src="/public/assets/navbar/menu-icon.png" class="hidden object-contain w-5" id="close-icon" />
+        <img src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/navbar/menu-icon.png" class="hidden object-contain w-5" id="close-icon" />
       </div>
     </div>
   </nav>
 
   <div
     id="menu"
-    class="bg-menu-navbar -translate-x-[768px] w-full h-screen shadow-md transition-all ease-in-out duration-200 flex flex-col gap-12 justify-center absolute z-10 top-0 right-0 left-0 md:hidden text-[#FFFFFF] px-8"
+    class="bg-menu-navbar -translate-x-[768px] w-full overflow-y-scroll pt-[5%] pb-[5%] h-max shadow-md transition-all ease-in-out duration-200 flex flex-col gap-12 justify-center absolute z-10 right-0 top-[80px] left-0 md:hidden text-[#FFFFFF] px-8"
   >
     <div class="pb-6 border-b-yellow border-2 border-t-0 border-r-0 border-l-0">
       <h4 class="Satoshi-bold text-3xl">FLY BEFORE YOU BUY</h4>
@@ -107,7 +107,7 @@ const { isLanding } = Astro.props;
 
 <style>
   .bg-menu-navbar {
-    background-image: linear-gradient(rgba(0, 0.137, 0.282, 0.7), rgba(0, 0.137, 0.282, 0.7)), url('/public/assets/navbar/navbar.png');
+    background-image: linear-gradient(rgba(0, 0.137, 0.282, 0.7), rgba(0, 0.137, 0.282, 0.7)), url('https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/navbar/navbar.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
