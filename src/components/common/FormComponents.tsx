@@ -69,7 +69,7 @@ export const PhoneField = ({ label, ...props }) => {
 };
 
 export const FormComponent = () => {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzbHWLAai-gYTEehKqLWQ_CDoNdY5WfZq69f2b9rh5AL-oFWtZynx1KKgQUtVmVvCDi/exec';
+  const scriptURL = 'https://hubspot-proxy-0d8d4ed31dcb.herokuapp.com/leadPush';
   const [phoneInput, setPhoneInput] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -80,12 +80,15 @@ export const FormComponent = () => {
     try {
       const response = await fetch(scriptURL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
+        redirect: 'follow',
+        headers: new Headers({
+          'Content-Type': 'text/plain;charset=utf-8',
+        }),
+        body: JSON.stringify({
           firstName: data.Name,
           email: data.email,
           phone: data.phone,
-        }).toString(),
+        }),
       });
 
       if (response.ok) {
