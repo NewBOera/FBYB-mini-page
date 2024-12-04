@@ -1,0 +1,18 @@
+version: 1
+applications:
+  - appRoot: / # Path to your Astro project, adjust if needed
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci # Install dependencies
+        build:
+          commands:
+            - npm run build # Build the Astro site
+      artifacts:
+        baseDirectory: dist # Location of built files
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/* # Cache dependencies
