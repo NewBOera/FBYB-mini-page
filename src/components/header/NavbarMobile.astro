@@ -117,9 +117,12 @@ const { isLanding } = Astro.props;
      .bg-menu-navbar {
         overflow-y: auto;
         height: calc(100vh - 80px);
-     }
-
-
-     
+    }
   }
+
+@media (max-width: 400px) and (max-height: 760px) {
+     .bg-menu-navbar {
+        padding-top: 120px;
+    }    
+}
 </style>
