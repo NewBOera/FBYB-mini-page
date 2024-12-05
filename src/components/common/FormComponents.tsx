@@ -93,6 +93,9 @@ export const FormComponent = () => {
 
       if (response.ok) {
         toast.success('Form data sent successfully');
+        setTimeout(() => {
+          window.open(`/thankyou?name=${data.Name}`, '_self');
+        }, 1500);
       } else {
         throw new Error('Error sending the form data');
       }

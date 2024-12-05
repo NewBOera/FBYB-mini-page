@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Why from '../sections/Why.astro';
+import Included from '../sections/Included/Included.astro';
+import How from '../sections/How.astro';
+import NavbarMobile from '../components/header/NavbarMobile.astro';
+import NavbarDesktop from '../components/header/NavbarDesktop.astro';
+import Book from '../sections/Book/Book.astro';
+import WhyUs from '../sections/WhyUs.astro';
+
+import HeroStructure from '../structures/HeroStructure.astro';
+
+import Everything from '../sections/Everything.astro';
+---
+
+<Layout title="Fly Before You Buy">
+  <!-- ? navbar mobile -->
+  <NavbarMobile isLanding={true} />
+
+  <!-- ? Header section desktop-->
+  <NavbarDesktop isLanding={true} />
+
+  <main class="flex flex-col gap-8 md:gap-10 lg:gap-[128px]">
+  
+    <HeroStructure id="home-section" wrapperClasses="items-center justify-center " sectionClasses="home-section" >
+  <div class="p-3 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-md h-max">
+    <!-- <img src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/home/hero.png" class="h-[150px] sm:h-[300px] md:h-[400px] w-full object-cover rounded-md" alt="" /> -->
+
+    <div class="flex flex-col gap-6 lg:flex-row lg:justify-around hero-content">
+      <div class="flex flex-col bg-hero bg-image pt-8 pb-10 sm:pb-20 md:p-20 lg:p-0 lg:py-20 lg:px-8 xl:px-12 relative items-center lg:justify-start flex-composition gap-8 lg:w-8/12">
+        <img src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/navbar/logo.png" class="logo" alt="" />
+        <article class="flex justify-center gap-4">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+            class="w-3 h-3 object-contain"
+            alt="Star icon"
+          />
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+            class="w-3 h-3 object-contain"
+            alt="Star icon"
+          />
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+            class="w-3 h-3 object-contain"
+            alt="Star icon"
+          />
+ 
+        </article>
+
+        <h1 class="Giyaste text-center w-full text-[28px]/[33px] px-5 lg:px-0 leading-normal tracking-widest text-blue 2xl:text-[34px]/[40.8px] xl:font-light xl:tracking-[0.5rem]">
+         THANK YOU!
+        </h1>
+        <p>
+          Dear <span id="thank-name"></span>, We’ve received your request and will contact you soon to confirm the details. Get ready for a seamless journey to explore Dubai’s finest properties!
+        </p>
+
+         <p class="secondary">
+              If you have any immediate questions, feel free to contact us via email or WhatsApp.
+         </p>
+
+
+         <div class="links-container">     <article class="p-1 flex items-center bg-blue hover:bg-yellow hover:text-[#001730] transition-all duration-200 text-yellow rounded-md">
+            <div class="bg-yellow h-full p-1 rounded-sm">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMjM0OCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+PHJlY3Qgd2lkdGg9IjE4LjUiIGhlaWdodD0iMTUuNSIgeD0iMi43NSIgeT0iNC4yNSIgcng9IjMiLz48cGF0aCBkPSJtMi43NSA4bDguNDE1IDMuODY2YTIgMiAwIDAgMCAxLjY3IDBMMjEuMjUgOCIvPjwvZz48L3N2Zz4="
+                alt="Phone icon"
+                class="h-8 w-8 object-contain"
+              />
+            </div>
+
+           <a href="mailto:hello@thehousinghearld.com"> <span class="text-center w-full font-medium">hello@thehousinghearld.com</span></a>
+          </article> 
+          
+             <article class="p-1 flex items-center bg-blue hover:bg-yellow hover:text-[#001730] transition-all duration-200 text-yellow rounded-md">
+            <div class="bg-yellow h-full p-1 rounded-sm">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMTUyMDYgNC40NjgzMkM3LjM2OTQ0IDQuOTk1MTkgNy4xNTIwNiA1LjUyMjA1IDUuOTU2NDMgNi44MDc2MUM1LjMwNDI3IDcuNDM5ODQgNS41MjE2NiA3LjY1MDU5IDYuNjczODEgOS4yMzExOEM3LjgyNTk1IDEwLjgxMTggOS43MTcyMSAxMi4yODcgMTEuNDU2MyAxMy4wNzczQzEzLjE5NTQgMTMuODY3NiAxMy4wODY3IDEzLjgxNDkgMTMuODE0OSAxMi45NzE5QzE1LjQ0NTMgMTEuMTgwNiAxNS4wMTA2IDEwLjc1OTEgMTYuNjQxIDExLjQ3NTZMMTkuNTc1NyAxMi44NDU1QzIwLjQ0NTIgMTMuMjY3IDIwLjQ4ODcgMTMuMjY3IDIwLjQ5OTYgMTMuNzkzOEMyMC41MTA0IDE0LjMyMDcgMjAuMzE0OCAxNS42OTA1IDE5LjczODcgMTYuMjgwNkMxOS4xNjI2IDE2Ljg3MDcgMTcuMDIxNCAxOC44OTM5IDEzLjIxNzEgMTcuNTQ1MUM5LjQxMjg3IDE2LjE5NjMgNi44MDQyNCAxNS4xMjE1IDIuNDU2NTEgOS40MzEzOUMtMS44OTEyMSAzLjc0MTI1IDIuMjgyNiAwLjM2OTMxOCAyLjg0NzgxIDAuMTU4NTcyQzMuNDEzMDEgLTAuMDUyMTc0NCAzLjYwODY2IDAuMDAwNTExOTM5IDQuNjk1NTkgMC4wMjE1ODY1QzQuOTg1NDQgMC4wMjE1ODY1IDUuMjM5MDYgMC4xOTcyMDggNS40NTY0NCAwLjU0ODQ1MSIgZmlsbD0iIzAwMTczMCIvPgo8L3N2Zz4K"
+                alt="Phone icon"
+                class="h-8 w-8 object-contain"
+              />
+            </div>
+
+           <a href="tel:971504577173"> <span class="text-center w-full font-medium">+971 50 457 7173</span></a>
+          </article>
+          </div>
+      
+      </div>
+
+      <div class="flex justify-center lg:w-6/12 xl:w-7/12 right-bg">
+      
+      </div>
+    </div>
+  </div>
+</HeroStructure>
+  </main>
+
+
+
+  <style>
+ 
+   img.logo {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 175px;
+      height: 67px;
+      z-index: 12;
+    }
+
+  .links-container {
+    display: flex;
+  }
+
+  .links-container > article {
+    margin: 0 9px;
+  }
+
+  .right-bg {
+    background: url('https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/H-Right.png') no-repeat;
+    background-size: cover;
+  }
+
+
+  .hero-content {
+    height: 750px;
+    width: 1272px;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  .flex-composition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   .flex-composition p {
+    text-align: center;
+    width: 384px;
+   }
+
+
+   .flex-composition p.secondary {
+    color: rgba(96, 103, 115, 1);
+
+   }
+
+
+   @media (max-width: 1500px) {
+     img.logo {
+      left: 30px;
+      top: 10px;
+    }
+
+   
+   }
+
+
+   @media (max-width: 1325px) {
+    .hero-content {
+    height: auto;
+    width:  auto;
+    padding-top: 5vh;
+   flex-direction: column;
+  }
+
+  .links-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .flex-composition  {
+    padding-top: 100px;
+   }
+.flex-composition p {
+    text-align: center;
+    width: 90%;
+   }
+  
+  
+    }
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById('thank-name').innerText = new URLSearchParams(location.search).get('name');
+    })
+  </script/>
+</Layout>
