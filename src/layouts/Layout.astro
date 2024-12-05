@@ -58,6 +58,16 @@ const { title } = Astro.props;
        src="https://www.facebook.com/tr?id=944183500931992&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16805647499">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16805647499');
+</script>
   </head>
   <body class="overflow flex flex-col items-center Satoshi-regular" transition:animate={fade({ duration: '0.5s' })}>
     <Toaster position="top-right" client:only="react" />
