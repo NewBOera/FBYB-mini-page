@@ -15,13 +15,13 @@ const { isLanding } = Astro.props;
     </div>
 
     <div id="menu-icon-container" class="flex items-center justify-center">
-      <div class="bg-[#00173033] p-3 rounded-sm">
+      <div  class="bg-[#00173033] p-3 rounded-sm flex-c">
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMjM0OCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik00IDEyaDE2TTQgNmgxNk00IDE4aDE2Ii8+PC9zdmc+"
           class="w-7 h-7 object-contain mobile-menu-button"
           id="menu-icon"
         />
-        <img  src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/close1.svg" class="mobile-menu-close-button hidden w-7 h-7 object-contain" id="close-icon" />
+        <img  src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/close1.svg" class="mobile-menu-close-button hidden w-5 h-5 object-contain" id="close-icon" />
       </div>
     </div>
   </nav>
@@ -116,6 +116,15 @@ const { isLanding } = Astro.props;
     background-repeat: no-repeat;
   }
 
+
+  .flex-c {
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (max-width: 600px) {
      .bg-menu-navbar {
         overflow-y: auto;
@@ -125,7 +134,7 @@ const { isLanding } = Astro.props;
 
 @media (max-width: 400px) and (max-height: 760px) {
      .bg-menu-navbar {
-        padding-top: 120px;
+        padding-top: 150px;
     }    
 }
 </style>
