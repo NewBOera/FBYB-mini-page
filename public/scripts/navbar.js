@@ -11,9 +11,15 @@ document.addEventListener('click', event => {
 
 function toggleMenu() {
   $menu.classList.toggle('-translate-x-[768px]');
-  $bgMenu.classList.toggle('hidden');
-  $menuIcon.classList.toggle('hidden');
-  $closeIcon.classList.toggle('hidden');
+  if (window.innerWidth <= 800) {
+    document.querySelector('.mobile-menu-close-button').classList.toggle('hidden');
+    document.body.classList.toggle('overflow-hidden');
+    document.querySelector('.mobile-menu-button').classList.toggle('hidden');
+  }
+  //window.innerWidth <= 800 && document.body.classList.toggle('mobile-menu-opened');
+  // $bgMenu?.classList.toggle('hidden');
+  // $menuIcon.classList.toggle('hidden');
+  // $closeIcon.classList.toggle('hidden');
 }
 
 const activeNavItem = () => {

@@ -41,3 +41,7 @@ section {
 .list-custom::marker {
   color: #b18e3b; /* Cambia al color deseado */
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}

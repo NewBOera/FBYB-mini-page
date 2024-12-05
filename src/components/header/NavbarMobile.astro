@@ -18,10 +18,10 @@ const { isLanding } = Astro.props;
       <div class="bg-[#00173033] p-3 rounded-sm">
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMjM0OCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik00IDEyaDE2TTQgNmgxNk00IDE4aDE2Ii8+PC9zdmc+"
-          class="w-7 h-7 object-contain"
+          class="w-7 h-7 object-contain mobile-menu-button"
           id="menu-icon"
         />
-        <img src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/navbar/menu-icon.png" class="hidden object-contain w-5" id="close-icon" />
+        <img  src="https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/close1.svg" class="mobile-menu-close-button hidden w-7 h-7 object-contain" id="close-icon" />
       </div>
     </div>
   </nav>
@@ -106,6 +106,9 @@ const { isLanding } = Astro.props;
 </header>
 
 <style>
+
+  
+
   .bg-menu-navbar {
     background-image: linear-gradient(rgba(0, 0.137, 0.282, 0.7), rgba(0, 0.137, 0.282, 0.7)), url('https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/navbar/navbar.png');
     background-size: cover;
