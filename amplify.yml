@@ -3,11 +3,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - yarn install
     build:
       commands:
         - env >> .env
-        - npm run build
+        - yarn run build
         - mv node_modules ./.amplify-hosting/compute/default
         - mv .env ./.amplify-hosting/compute/default/.env
   artifacts:
