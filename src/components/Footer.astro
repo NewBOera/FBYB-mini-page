@@ -18,17 +18,17 @@
 
       <article class="flex flex-col gap-8 w-full lg:w-4/12">
         <div class="flex flex-col gap-2">
-          <!-- <article class="p-1 flex items-center bg-blue text-yellow rounded-md">
-            <div class="bg-yellow h-full p-1 rounded-sm">
+         <article class="p-1 flex items-center bg-blue hover:bg-yellow hover:text-[#001730] transition-all duration-200 text-yellow rounded-md">
+            <div class="h-full p-1 rounded-sm" style="background: linear-gradient(321.03deg, #28D145 6.21%, #60FC7C 92.58%);">
               <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Ik02LjYyIDEwLjc5YzEuNDQgMi44MyAzLjc2IDUuMTUgNi41OSA2LjU5bDIuMi0yLjJjLjI4LS4yOC42Ny0uMzYgMS4wMi0uMjVjMS4xMi4zNyAyLjMyLjU3IDMuNTcuNTdhMSAxIDAgMCAxIDEgMVYyMGExIDEgMCAwIDEtMSAxQTE3IDE3IDAgMCAxIDMgNGExIDEgMCAwIDEgMS0xaDMuNWExIDEgMCAwIDEgMSAxYzAgMS4yNS4yIDIuNDUuNTcgMy41N2MuMTEuMzUuMDMuNzQtLjI1IDEuMDJ6Ii8+PC9zdmc+"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMS44NzM1IDMuNzM4ODVDMTkuNDY2NiAxLjMyOTEyIDE2LjI2NTcgMC4wMDE0NzE4OSAxMi44NTU1IDBDNS44Mjg2OSAwIDAuMTA5NjU2IDUuNzE4NjYgMC4xMDY4MzUgMTIuNzQ3N0MwLjEwNTk3NiAxNC45OTQ1IDAuNjkyODkzIDE3LjE4NzYgMS44MDg1OSAxOS4xMjExTDAgMjUuNzI3Mkw2Ljc1ODE5IDIzLjk1NDRDOC42MjAyNSAyNC45NyAxMC43MTY3IDI1LjUwNTQgMTIuODUwMyAyNS41MDYySDEyLjg1NTZDMTkuODgxNyAyNS41MDYyIDI1LjYwMTIgMTkuNzg2OCAyNS42MDQyIDEyLjc1NzZDMjUuNjA1NCA5LjM1MTQxIDI0LjI4MDQgNi4xNDg0NiAyMS44NzM1IDMuNzM4ODVaTTEyLjg1NTYgMjMuMzUzMUgxMi44NTEzQzEwLjk1IDIzLjM1MjQgOS4wODUxMiAyMi44NDE1IDcuNDU4MzIgMjEuODc2MUw3LjA3MTMzIDIxLjY0NjZMMy4wNjA5MiAyMi42OTg1TDQuMTMxMzUgMTguNzg4NEwzLjg3OTQxIDE4LjM4NzRDMi44MTg3OSAxNi43MDA0IDIuMjU4NDkgMTQuNzUwNiAyLjI1OTM1IDEyLjc0ODNDMi4yNjE2OCA2LjkwNjExIDcuMDE1MDMgMi4xNTMxMyAxMi44NTk5IDIuMTUzMTNDMTUuNjkgMi4xNTQxMSAxOC4zNTA2IDMuMjU3NjYgMjAuMzUxMSA1LjI2MDY2QzIyLjM1MTYgNy4yNjM1NCAyMy40NTI2IDkuOTI1NyAyMy40NTE1IDEyLjc1N0MyMy40NDkyIDE4LjU5OTcgMTguNjk1OCAyMy4zNTMxIDEyLjg1NTYgMjMuMzUzMVpNMTguNjY3NyAxNS40MTcxQzE4LjM0OTIgMTUuMjU3NyAxNi43ODMyIDE0LjQ4NzEgMTYuNDkxMiAxNC4zODA3QzE2LjE5OTMgMTQuMjc0NiAxNS45ODY4IDE0LjIyMTQgMTUuNzc0NSAxNC41NDAzQzE1LjU2MjIgMTQuODU5MiAxNC45NTE2IDE1LjU3NjcgMTQuNzY1OCAxNS43ODkzQzE0LjU3OTkgMTYuMDAxOCAxNC4zOTQxIDE2LjAyODUgMTQuMDc1NyAxNS44Njg5QzEzLjc1NyAxNS43MDk2IDEyLjczMDggMTUuMzczMiAxMS41MTQgMTQuMjg3OUMxMC41NjcxIDEzLjQ0MzMgOS45Mjc3OCAxMi40MDAyIDkuNzQxOTYgMTIuMDgxMkM5LjU1NjEzIDExLjc2MjIgOS43MjIwOSAxMS41ODk5IDkuODgxNjYgMTEuNDMxMUMxMC4wMjQ5IDExLjI4ODMgMTAuMjAwMiAxMS4wNTg5IDEwLjM1OTUgMTAuODczQzEwLjUxODkgMTAuNjg3IDEwLjU3MTkgMTAuNTU0MSAxMC42NzgxIDEwLjM0MTVDMTAuNzg0MyAxMC4xMjg5IDEwLjczMTIgOS45NDI4NyAxMC42NTE1IDkuNzgzNTRDMTAuNTcxOSA5LjYyMzk2IDkuOTM0NzcgOC4wNTYwMyA5LjY2OTM0IDcuNDE4MjFDOS40MTA3OCA2Ljc5NzE5IDkuMTQ4MTcgNi44ODEyMSA4Ljk1MjY1IDYuODcxNEM4Ljc2NzA3IDYuODYyMiA4LjU1NDUxIDYuODYwMTIgOC4zNDIwNyA2Ljg2MDEyQzguMTI5NzUgNi44NjAxMiA3Ljc4NDcxIDYuOTM5ODQgNy40OTI2NiA3LjI1ODc1QzcuMjAwNzQgNy41Nzc2NiA2LjM3NzgzIDguMzQ4MzIgNi4zNzc4MyA5LjkxNjI1QzYuMzc3ODMgMTEuNDg0MiA3LjUxOTE2IDEyLjk5ODggNy42Nzg0OSAxMy4yMTE0QzcuODM3NyAxMy40MjQgOS45MjQ3MiAxNi42NDE0IDEzLjEyMDEgMTguMDIxM0MxMy44Nzk5IDE4LjM0OTYgMTQuNDczMyAxOC41NDU1IDE0LjkzNiAxOC42OTI0QzE1LjY5OTIgMTguOTM0OSAxNi4zOTM2IDE4LjkwMDYgMTYuOTQyMyAxOC44MTg2QzE3LjU1NDQgMTguNzI3MSAxOC44MjcgMTguMDQ4IDE5LjA5MjQgMTcuMzAzOUMxOS4zNTc4IDE2LjU1OTggMTkuMzU3OCAxNS45MjE5IDE5LjI3ODIgMTUuNzg5MUMxOS4xOTg2IDE1LjY1NjQgMTguOTg2MyAxNS41NzY3IDE4LjY2NzcgMTUuNDE3MVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="
                 alt="Phone icon"
                 class="h-8 w-8 object-contain"
               />
             </div>
 
-            <span class="text-center w-full font-medium">+971 50 457 7173</span>
-          </article> -->
+           <a style="flex:1;text-align: center;" href="https://api.whatsapp.com/send/?phone=+971561315862&text=test&type=phone_number&app_absent=0"> <span class="text-center w-full font-medium">+971 56 131 5862</span></a>
+          </article>
 
           <article class="p-1 flex items-center bg-blue hover:bg-yellow hover:text-[#001730] transition-all duration-200 text-yellow rounded-md">
             <div class="bg-yellow h-full p-1 rounded-sm">
