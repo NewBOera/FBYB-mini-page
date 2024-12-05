@@ -98,7 +98,11 @@ import Everything from '../sections/Everything.astro';
       </div>
 
       <div class="flex justify-center lg:w-6/12 xl:w-7/12 right-bg">
-      
+          <ul class="quick-lins">
+            <li><a>About Us</a></li>
+            <li><a>Testimonials</a></li>
+            <li><a>Contact</a></li>
+          </ul>
       </div>
     </div>
   </div>
@@ -134,8 +138,32 @@ import Everything from '../sections/Everything.astro';
   .right-bg {
     background: url('https://shualim.online/wlp/FBYB/FBYB-mini/public/assets/H-Right.png') no-repeat;
     background-size: cover;
-    
+    position: relative;
   }
+
+  .quick-lins {
+ position: absolute;
+ top: 34px;
+ right: 30px;
+ display: flex;
+  }
+.quick-lins li {
+  margin-left: 8px;
+}
+  .quick-lins a {
+    border-radius: 4px;
+    opacity: .9;
+    display: inline-block;
+    padding: 6px 13px;
+    color: rgba(248, 251, 255, 1);
+    border: 1px solid  rgba(248, 251, 255, 1);
+  cursor: pointer;
+  transition: all .4s ease;
+
+  }
+.quick-lins a:hover {
+  opacity: 1;
+}
 
 
   .hero-content {
